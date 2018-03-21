@@ -1,0 +1,18 @@
+<app-dynamique-headre></app-dynamique-headre>
+<div class="streaming" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+  <div class="title">
+    Live
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" class="full-width" >
+    <div class="live-channels" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayout.lt-sm="column" fxFlex.gt-sm="80" fxFlex.gt-lg="60">
+      <div class="stream-card" *ngFor="let streamer of streaming_channels">
+        <img src="{{streamer.pic_url}}" alt="Photo of a Shiba Inu">
+        <div class="over-pic" fxLayout="column" fxLayoutAlign="end">
+            <span>{{streamer.title}}</span>
+            <small>{{streamer.view}} view , {{streamer.like}} like</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

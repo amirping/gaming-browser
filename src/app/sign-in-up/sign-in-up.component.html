@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Hi , Welcome in our Gaming Browser</h1>
+<div mat-dialog-content>
+  <p>To get the abilty to access to shop , you have first to register or to login if you already have an account</p>
+
+  <mat-tab-group class="demo-tab-group">
+      <mat-tab label="Sign in">
+        <div class="demo-tab-content" >
+        <form class="form" fxLayout="column">
+          <mat-form-field [floatLabel]="auto">
+            <mat-label>Both a label and a placeholder</mat-label>
+            <input matInput placeholder="Simple placeholder">
+          </mat-form-field>
+          <mat-form-field [floatLabel]="auto">
+            <mat-label>Both a label and a placeholder</mat-label>
+            <input matInput placeholder="Simple placeholder">
+          </mat-form-field>
+          <button mat-button color="primary" (click)="null">Connect</button>
+        </form>
+        </div>
+      </mat-tab>
+      <mat-tab label="Sign up">
+        <div class="demo-tab-content" >
+          <form class="form" fxLayout="column">
+            <mat-form-field [floatLabel]="auto">
+              <mat-label>Both a label and a placeholder</mat-label>
+              <input matInput placeholder="Simple placeholder">
+            </mat-form-field>
+            <mat-form-field [floatLabel]="auto">
+              <mat-label>Both a label and a placeholder</mat-label>
+              <input matInput placeholder="Simple placeholder">
+            </mat-form-field>
+            <button mat-button (click)="null" color="primary">Register now</button>
+          </form>
+        </div>
+      </mat-tab>
+</mat-tab-group>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+</div>

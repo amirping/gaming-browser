@@ -1,0 +1,32 @@
+<!-- <app-static-headre></app-static-headre> -->
+<app-dynamique-headre></app-dynamique-headre>
+<div class="home" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+  <div class="live-redirection" routerLink="/live">
+    <mat-icon class="bottom-line animated infinite fadeOut">fiber_manual_record</mat-icon>
+    Live
+  </div>
+  <div class="logo-row">
+    <img src="/assets/icon.png" alt="">
+  </div>
+  <div class="search-row" fxLayout="row" fxLayoutAlign="center center">
+    <div class="fake-input" fxFlex.gt-sm="50" fxFlex.lt-md="80">
+      <input type="text" name="" value="" placeholder="search for somthing !!">
+      <button mat-icon-button>
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="serach-type" fxLayout="row">
+    <mat-button-toggle-group #group="matButtonToggleGroup" class="search-buttons">
+      <mat-button-toggle value="web">
+        Web
+      </mat-button-toggle>
+      <mat-button-toggle value="images">
+        Images
+      </mat-button-toggle>
+      <mat-button-toggle value="videos">
+        Videos
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
