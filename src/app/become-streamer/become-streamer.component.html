@@ -1,0 +1,100 @@
+<app-static-headre></app-static-headre>
+<div class="become-streamer" fxLayout="column" fxLayoutAlign="start center" fxFlex>
+  <div class="banner" fxLayout="row">
+    <div class="intro" fxLayout="column" fxFlex="60">
+      <div fxLayout="row" fxLayoutAlign="end">
+        <div fxLayout="column" fxFlex="80">
+          <h3>Become Streamer !</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div class="text-box" fxLayout="column" fxFlex="30" fxFlex.lt-md="100">
+      <div class="header">
+        Game browser turkish language
+      </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="bottom" fxLayout="row" fxLayoutAlign="center">
+        <h3 fxFlex="30">tamam</h3>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px" class="pub-row">
+    <div class="box-pub" fxLayout="column" fxLayoutAlign="space-between">
+      <img src="/assets/money-bag.png" alt="">
+      <span>Money</span>
+    </div>
+    <div class="box-pub" fxLayout="column" fxLayoutAlign="space-between">
+      <img src="/assets/connect.png" alt="">
+      <span>connect</span>
+    </div>
+    <div class="box-pub" fxLayout="column" fxLayoutAlign="space-between">
+      <img src="/assets/share.png" alt="">
+      <span>streame</span>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayout="column" class="form-box">
+      <h4>Fill up this form</h4>
+      <form class="" action="index.html" method="post">
+        <div fxLayout="row" fxLayoutGap="20px" class="form-row">
+          <label for="">Name </label>
+          <input type="text" name="" value="" fxFlex>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" class="form-row">
+          <label for="">email </label>
+          <input type="email" name="" value="" fxFlex>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" class="form-row">
+          <label for="">Name </label>
+          <input type="number" name="" value="" fxFlex="20">
+          <input type="number" name="" value="" fxFlex>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" class="form-row">
+          <label for="">Stream Type </label>
+          <mat-button-toggle-group #group="matButtonToggleGroup" class="type-buttons" multiple>
+            <mat-button-toggle value="music" class="stream-type-button">
+              Music
+            </mat-button-toggle>
+            <mat-button-toggle value="game" class="stream-type-button">
+              Game
+            </mat-button-toggle>
+            <mat-button-toggle value="talk_show" class="stream-type-button">
+              TalkSHow
+            </mat-button-toggle>
+            <mat-button-toggle value="other" class="stream-type-button">
+              Others
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" class="form-row">
+          <label for="">Chose a picture</label>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center" fxFlex>
+            <button mat-fab class="add-picture">
+              <mat-icon>add</mat-icon>
+            </button>
+            <button mat-fab class="add-picture">
+              <mat-icon>add</mat-icon>
+            </button>
+            <button mat-fab class="add-picture">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" class="form-row">
+          <label for="">tanitin</label>
+          <textarea name="descrb" rows="6" fxFlex></textarea>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="20px" class="form-row">
+          <button mat-button class="submit-btn" > submit </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

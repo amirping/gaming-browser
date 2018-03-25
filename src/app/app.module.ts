@@ -16,6 +16,8 @@ import { StaticHeadreComponent } from './static-headre/static-headre.component';
 import { SignInUpComponent } from './sign-in-up/sign-in-up.component';
 import { StreamingComponent } from './streaming/streaming.component';
 import { ShopComponent } from './shop/shop.component';
+import { BecomeStreamerComponent } from './become-streamer/become-streamer.component';
+import { AddAdsComponent } from './add-ads/add-ads.component';
 
 const routes: Routes = [
   {
@@ -25,6 +27,8 @@ const routes: Routes = [
       { path: 'about', component: AboutUsComponent },
       { path: 'help', component: HelpComponent },
       { path: 'live', component: StreamingComponent },
+      { path: 'be-streamer', component: BecomeStreamerComponent },
+      { path: 'add-ads',component: AddAdsComponent}
     ] },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -42,7 +46,9 @@ const routes: Routes = [
     StaticHeadreComponent,
     SignInUpComponent,
     StreamingComponent,
-    ShopComponent
+    ShopComponent,
+    BecomeStreamerComponent,
+    AddAdsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,131 @@
+:host {
+  flex: 1;
+  flex-direction: column;
+}
+
+.become-streamer {
+  flex: 1;
+}
+
+.banner {
+  background: url('https://cdn.graph.office.net/prod/media/home/MSFTGraphHero_1600x600.png') center left;
+}
+
+.banner p {
+  margin: 0;
+  color: white;
+  text-transform: capitalize;
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.banner h3 {
+  margin-left: 20px;
+  color: white;
+  margin-bottom: -10px;
+}
+
+.banner .intro {
+  background: red;
+  background: -moz-linear-gradient(left, rgba(255, 26, 0, 1) 0%, rgba(255, 26, 0, 0.9) 80%, rgba(255, 26, 0, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(255, 26, 0, 1) 0%, rgba(255, 26, 0, 0.9) 80%, rgba(255, 26, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 26, 0, 1) 0%, rgba(255, 26, 0, 0.9) 80%, rgba(255, 26, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0fff1a00', endColorstr='#0fff1a00', GradientType=1);
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.text-box {
+  margin: 10px;
+  background:rgb(63, 64, 62) url('/assets/gamepad.png') no-repeat;
+  background-size: contain;
+  background-position: 150% 100% ;
+}
+
+.text-box .header {
+  background: rgb(238, 37, 85) url('/assets/gamepad.png') bottom left no-repeat;
+  background-size: contain;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.text-box .text {
+  color: white;
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+.text-box .bottom {
+  color: white;
+  text-transform: capitalize;
+}
+
+.text-box .bottom h3 {
+  background: rgb(238, 37, 85);
+  text-align: center;
+}
+
+.box-pub {
+  background: rgb(77, 77, 77);
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.box-pub img {
+  width: 100px;
+}
+
+.box-pub span {
+  text-align: center;
+  color: rgb(145, 145, 145);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+.pub-row {
+  margin-top: 30px;
+}
+.form-box{
+  margin-top: 30px
+}
+.form-box h4{
+  background: rgb(170, 8, 52);
+  color: white;
+  text-align: center;
+  padding: 10px
+}
+.form-box .form-row{
+  padding: 5px;
+  margin: 5px;
+}
+.inData{
+
+}
+.stream-type-button{
+  padding: 5px;
+  color: red ;
+  text-align: center ;
+  background: rgb(144, 144, 144);
+  font-weight: bold;
+  border:1px solid rgb(73, 73, 73);
+  margin: 5px;
+}
+.mat-button-toggle-checked{
+  background: rgb(215, 29, 40);
+  color: white;
+  transition: all 300ms;
+}
+.type-buttons{
+  box-shadow: none;
+}
+.submit-btn{
+  background: rgb(255, 36, 36);
+  color: white;
+}
+.add-picture{
+  background: rgb(226, 226, 226);
+  box-shadow: none;
+}
