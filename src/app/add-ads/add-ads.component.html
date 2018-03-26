@@ -1,3 +1,77 @@
-<p>
-  add-ads works!
-</p>
+<app-static-headre></app-static-headre>
+<div class="add-ads" fxLayout="column" fxLayoutAlign="start center" fxFlex>
+  <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+  <mat-step>
+    <form class="form">
+      <ng-template matStepLabel>First Step</ng-template>
+      <div class="" fxLayout="column">
+        <label for="">Email</label>
+        <input type="email" name="" value="" class="input">
+      </div>
+      <div class="" fxLayout="column">
+        <label for="">name & last name</label>
+        <div class="" fxLayout="row">
+          <input type="text" name="" value="" class="input">
+          <input type="text" name="" value="" class="input">
+        </div>
+      </div>
+      <div class="" fxLayout="column">
+        <label for="">URL</label>
+        <input type="url" name="" value="" class="input">
+      </div>
+      <div class="" fxLayout="column">
+        <label for="">Phone number</label>
+        <div class="" fxLayout="row">
+          <input type="number" name="" value="" class="input" width="3">
+          <input type="number" name="" value="" class="input">
+        </div>
+      </div>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step >
+    <form fxLayout="column">
+      <ng-template matStepLabel>seconde step</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="email" type="email" required>
+      </mat-form-field>
+      <mat-form-field fxLayout="row">
+        <input matInput placeholder="name" required>
+        <input matInput placeholder="last name" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="url" type="url" required>
+      </mat-form-field>
+      <mat-form-field fxLayout="row">
+        <input matInput type="number" required><input matInput type="number" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Billing things</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Finishing</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+</div>
