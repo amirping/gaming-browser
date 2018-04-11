@@ -1,0 +1,9 @@
+:host {
+  flex: 1;
+  flex-direction: column;
+}
+
+.search {
+  flex: 1;
+  padding: 10px;
+}

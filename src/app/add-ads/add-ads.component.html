@@ -4,60 +4,55 @@
   <mat-step>
     <form class="form">
       <ng-template matStepLabel>First Step</ng-template>
-      <div class="" fxLayout="column">
+      <div class="row" fxLayout="column">
         <label for="">Email</label>
         <input type="email" name="" value="" class="input">
       </div>
-      <div class="" fxLayout="column">
+      <div class="row" fxLayout="column">
         <label for="">name & last name</label>
         <div class="" fxLayout="row">
           <input type="text" name="" value="" class="input">
           <input type="text" name="" value="" class="input">
         </div>
       </div>
-      <div class="" fxLayout="column">
+      <div class="row" fxLayout="column">
         <label for="">URL</label>
         <input type="url" name="" value="" class="input">
       </div>
-      <div class="" fxLayout="column">
+      <div class="row" fxLayout="column">
         <label for="">Phone number</label>
         <div class="" fxLayout="row">
-          <input type="number" name="" value="" class="input" width="3">
-          <input type="number" name="" value="" class="input">
+          <input type="number" name="" value="" class="input" width="3" fxFlex="20">
+          <input type="number" name="" value="" class="input" fxFlex="80">
         </div>
       </div>
-      <div>
-        <button mat-button matStepperNext>Next</button>
+      <div fxLayoutAlign="end" fxLayout="row">
+        <button mat-button matStepperNext class="next">Next</button>
       </div>
     </form>
   </mat-step>
   <mat-step >
     <form fxLayout="column">
       <ng-template matStepLabel>seconde step</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="email" type="email" required>
-      </mat-form-field>
-      <mat-form-field fxLayout="row">
-        <input matInput placeholder="name" required>
-        <input matInput placeholder="last name" required>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="url" type="url" required>
-      </mat-form-field>
-      <mat-form-field fxLayout="row">
-        <input matInput type="number" required><input matInput type="number" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+      <div class="row" fxLayout="column">
+        <label for="">Chose a country</label>
+        <mat-select placeholder="pick a country">
+            <mat-option [value]="0">chose a country</mat-option>
+            <mat-option [value]="1">Tunisia</mat-option>
+            <mat-option [value]="2">Algeria</mat-option>
+        </mat-select>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end">
+        <button mat-button matStepperPrevious class="back">Back</button>
+        <button mat-button matStepperNext class="next">Next</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
+  <mat-step>
+    <form>
       <ng-template matStepLabel>Billing things</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        <input matInput placeholder="Address" required>
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>

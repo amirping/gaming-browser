@@ -8,5 +8,18 @@
     <span class="mat-button large" routerLink="/about" routerLinkActive="active-link"> About </span>
     <span class="mat-button large" routerLink="/help" routerLinkActive="active-link"> Help </span>
   </div>
-
+  <button mat-icon-button [matMenuTriggerFor]="menuRef" fxShow.gt-sm="false">
+      <mat-icon class="mat-18">menu</mat-icon>
+  </button>
+  <mat-menu #menuRef="matMenu">
+      <button mat-menu-item routerLink="/home">
+          Home
+      </button>
+      <button mat-menu-item routerLink="/about">
+        About
+      </button>
+      <button mat-menu-item routerLink="/help">
+        Help
+      </button>
+  </mat-menu>
 </mat-toolbar>

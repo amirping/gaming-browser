@@ -10,14 +10,14 @@
   </div>
   <div class="search-row" fxLayout="row" fxLayoutAlign="center center">
     <div class="fake-input" fxFlex.gt-sm="50" fxFlex.lt-md="80">
-      <input type="text" name="" value="" placeholder="search for somthing !!">
-      <button mat-icon-button>
+      <input type="text" name="" [(ngModel)]="search.word" placeholder="search for somthing !!">
+      <button mat-icon-button (click)="doSearch()">
         <mat-icon>search</mat-icon>
       </button>
     </div>
   </div>
   <div class="serach-type" fxLayout="row">
-    <mat-button-toggle-group #group="matButtonToggleGroup" class="search-buttons">
+    <mat-button-toggle-group #group="matButtonToggleGroup" class="search-buttons" [(ngModel)]="search.type">
       <mat-button-toggle value="web">
         Web
       </mat-button-toggle>

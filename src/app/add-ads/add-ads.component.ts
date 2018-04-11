@@ -7,18 +7,19 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./add-ads.component.css']
 })
 export class AddAdsComponent implements OnInit {
-  isLinear = false;
+    isLinear = false;
     firstFormGroup: FormGroup;
     secondFormGroup: FormGroup;
+    user_ads = {
+      name : "",
+      last_name:"",
+      pre_phone:"",
+      phone_number:"",
+      url:""
+    }
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
   }
 
 }

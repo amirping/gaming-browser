@@ -1,3 +1,18 @@
-<p>
-  help works!
-</p>
+<app-static-headre></app-static-headre>
+<div class="help" fxLayout="column" fxLayoutAlign="start center" fxFlex>
+  <div fxLayout="row" fxLayoutAlign="center stretch" fxFlex="35" class="row banner"></div>
+  <div fxLayout="row" fxLayoutAlign="center stretch" fxFlex class="row">
+    <mat-accordion class="margin-back" displayMode="default" [multi]="true" [hideToggle]="false" fxFlex.lt-sm="100" fxFlex.gt-md="60">
+      <mat-expansion-panel *ngFor="let question of question_list" [hideToggle]="false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{question.question}}</mat-panel-title>
+          <mat-panel-description>fast feedback</mat-panel-description>
+        </mat-expansion-panel-header>
+        {{question.response}}
+        <mat-action-row>
+          <button mat-button (click)="null">Good</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

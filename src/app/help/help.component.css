@@ -1,0 +1,20 @@
+:host {
+  flex: 1;
+  flex-direction: column;
+}
+
+.help {
+  flex: 1;
+}
+.row
+{
+    width: 100%;
+    /* position: relative; */
+}
+.banner{
+    background: crimson;
+    min-height: 200px;
+}
+.margin-back{
+    margin-top: -50px;
+}

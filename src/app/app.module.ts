@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { MaterialModule } from "./material/material.module";
+import { MaterialModule } from './material/material.module';
 import { MainComponent } from './main/main.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -19,7 +19,7 @@ import { StreamingComponent } from './streaming/streaming.component';
 import { ShopComponent } from './shop/shop.component';
 import { BecomeStreamerComponent } from './become-streamer/become-streamer.component';
 import { AddAdsComponent } from './add-ads/add-ads.component';
-
+import { SearchComponent } from './search/search.component';
 const routes: Routes = [
   {
     path: '', component: MainComponent, children: [
@@ -29,7 +29,8 @@ const routes: Routes = [
       { path: 'help', component: HelpComponent },
       { path: 'live', component: StreamingComponent },
       { path: 'be-streamer', component: BecomeStreamerComponent },
-      { path: 'add-ads',component: AddAdsComponent}
+      { path: 'add-ads', component: AddAdsComponent},
+      { path: 'search/:word/:type', component: SearchComponent}
     ] },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -49,7 +50,8 @@ const routes: Routes = [
     StreamingComponent,
     ShopComponent,
     BecomeStreamerComponent,
-    AddAdsComponent
+    AddAdsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,8 @@ const routes: Routes = [
   entryComponents : [
     SignInUpComponent
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
