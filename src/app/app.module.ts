@@ -20,6 +20,7 @@ import { ShopComponent } from './shop/shop.component';
 import { BecomeStreamerComponent } from './become-streamer/become-streamer.component';
 import { AddAdsComponent } from './add-ads/add-ads.component';
 import { SearchComponent } from './search/search.component';
+import { SearchMediaMoreComponent } from './search-media-more/search-media-more.component';
 const routes: Routes = [
   {
     path: '', component: MainComponent, children: [
@@ -30,7 +31,8 @@ const routes: Routes = [
       { path: 'live', component: StreamingComponent },
       { path: 'be-streamer', component: BecomeStreamerComponent },
       { path: 'add-ads', component: AddAdsComponent},
-      { path: 'search/:word/:type', component: SearchComponent}
+      { path: 'search/:word/:type', component: SearchComponent},
+      { path: 'shop', component: ShopComponent}
     ] },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -51,7 +53,8 @@ const routes: Routes = [
     ShopComponent,
     BecomeStreamerComponent,
     AddAdsComponent,
-    SearchComponent
+    SearchComponent,
+    SearchMediaMoreComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true })
   ],
   entryComponents : [
-    SignInUpComponent
+    SignInUpComponent,
+    SearchMediaMoreComponent
   ],
   providers: [
   ],

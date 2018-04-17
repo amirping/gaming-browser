@@ -1,0 +1,22 @@
+<mat-dialog-content fxFlex="100%" fxFlexFill>
+  <div fxFlex fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="start stretch" fxLayoutGap="2px">
+    <div fxLayout="column" fxLayoutAlign="center stretch">
+      <img src="{{result_item.img_url}}" alt="" fxFlex>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="gappx" fxFlex>
+      <div class="result-item">
+        <h3>{{result_item.title}}</h3>
+        <small>{{result_item.result_url}}</small>
+        <small>{{result_item.size}}</small>
+        <p>{{result_item.dscrp}}</p>
+      </div>
+      <h4 class="similair">similair result</h4>
+      <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+        <div *ngFor="let item of similair_result">
+          <img src="{{item.img_url}}" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</mat-dialog-content>

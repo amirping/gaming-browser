@@ -1,11 +1,25 @@
 <app-static-headre></app-static-headre>
 <div class="search" fxLayout="column" fxLayoutAlign="start center" fxFlex>
-  <mat-tab-group [disableRipple]="false">
-      <mat-tab label="web" >
-          tabbody
+  <div class="full-width" fxLayout="row" fxLayoutAlign="center center">
+    <mat-tab-group [disableRipple]="false" fxFlex.gt-md="50" fxFlex.gt-sm="70" fxFlex.lt-sm="100">
+      <mat-tab label="web">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+          <mat-list fxFlex="100%" fxFlexFill>
+            <mat-list-item *ngFor="let item of web_result">
+              <h3 matLine>{{item.title}}</h3>
+              <p matLine> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit saepe fugit ratione, pariatur omnis sapiente
+                sit ex qui expedita? Dolor, eveniet mollitia expedita ratione et dolorum cupiditate corporis nobis laudantium?
+                {{item.dscrp}}</p>
+            </mat-list-item>
+          </mat-list>
+        </div>
       </mat-tab>
-      <mat-tab label="image" >
-        tabbody
+      <mat-tab label="image">
+        <div fxFlex fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+          <div *ngFor="let item of img_result" (click)="showMore($event,item.id_search_res)">
+            <img src="{{item.img_url}}" alt="">
+          </div>
+        </div>
       </mat-tab>
       <mat-tab label="video">
         tabbody
@@ -13,5 +27,6 @@
       <mat-tab label="else">
         tabbody
       </mat-tab>
-  </mat-tab-group>
+    </mat-tab-group>
+  </div>
 </div>

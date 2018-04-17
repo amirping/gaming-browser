@@ -1,3 +1,31 @@
-<p>
-  shop works!
-</p>
+<app-static-headre></app-static-headre>
+<div class="shop" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+  <div class="full-width" fxLayout="column" fxLayoutAlign="center center">
+    <div class="scroller" fxLayout="row" fxLayoutAlign="center center">
+      <button mat-icon-button (click)="perviousCard()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <span class="indector"> {{shop_list[index_item].title | uppercase}} </span>
+      <button mat-icon-button (click)="nextCard()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+    <div class="cards-scroller" fxLayout="row" fxLayoutAlign="center center">
+      <div *ngFor="let card of shop_list; index as i" class="card" [class.active-card]="card.stat == true" (click)="selectToShow(i)">
+        <div class="over" fxLayout="row" fxLayoutAlign="start stretch">
+          <div *ngIf="card.stat == true" fxLayoutAlign="center stretch" class="more animated slideInLeft" fxFlex="40">
+            more info
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+            <!-- <div fxLayout="row" fxLayoutAlign="center center"> -->
+              <h3 class="title">{{card.title | uppercase }}</h3>
+              <span class="price">{{card.price}}</span>
+              <button *ngIf="card.stat == true" mat-raised-button (click)="onClick">Visit</button>
+            <!-- </div> -->
+          </div>
+        </div>
+        <img src="{{card.img}}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
